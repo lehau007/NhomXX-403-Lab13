@@ -3,6 +3,12 @@
 
 Do nhóm chỉ có 3 thành viên (thay vì 6 như gợi ý ban đầu), khối lượng công việc sẽ được gom nhóm lại thành 3 mảng chính: **Lõi Hệ thống (Core)**, **Đảm bảo Chất lượng (Reliability)**, và **Báo cáo & Trình bày (Reporting)**.
 
+- Thành viên 1: Ngô Anh Tú
+- Thành viên 2: Nguyễn Bá Hào
+- Thành viên 3: Lê Văn Hậu
+
+---
+
 ## 1. Phân công công việc (Role Assignment)
 
 ### 🧑‍💻 Thành viên 1: Core Instrumentation (Logging, PII & Tracing)

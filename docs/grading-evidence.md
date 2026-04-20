@@ -29,7 +29,14 @@
 
 ### 5. Dashboard with 6 panels
 - **Mô tả**: Bảng điều khiển (Dashboard) trên Langfuse bao gồm 6 biểu đồ: Request Rate, Latency (P50, P90, P99), Error Rate, Token Usage, Active Traces, và Total Cost.
-- **Evidence**: `![6-Panel Dashboard](images/langfuse_dashboard.png)`
+- **Evidence**: `![6-Panel Dashboard](images/langfuse_dashboard_6_panels_1.png)`
+`![6-Panel Dashboard](images/langfuse_dashboard_6_panels_2.png)`
+`![6-Panel Dashboard](images/langfuse_dashboard_6_panels_3.png)`
+`![6-Panel Dashboard](images/langfuse_dashboard_6_panels_4.png)`
+`![6-Panel Dashboard](images/langfuse_dashboard_6_panels_5.png)`
+`![6-Panel Dashboard](images/langfuse_dashboard_6_panels_6.png)`
+
+
 
 ### 6. Alert rules with runbook link
 - **Mô tả**: Ảnh chụp màn hình cấu hình Cảnh báo (Alerts) hoặc nội dung file YAML chứng minh nhóm đã thiết lập Alert kèm theo đường dẫn tới tài liệu giải quyết sự cố (Runbook).
