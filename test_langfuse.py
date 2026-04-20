@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from langfuse.decorators import observe, langfuse_context
+from app.tracing import observe, langfuse_context
 
 @observe()
 def test_trace():

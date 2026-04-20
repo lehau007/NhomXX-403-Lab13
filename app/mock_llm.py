@@ -22,7 +22,7 @@ class FakeResponse:
 
 
 class FakeLLM:
-    def __init__(self, model: str = "claude-sonnet-4-5") -> None:
+    def __init__(self, model: str = "claude-sonnet-4-6") -> None:
         self.model = model
 
     @observe()

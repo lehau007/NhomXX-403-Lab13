@@ -16,7 +16,7 @@ from .metrics import record_error, snapshot
 from .middleware import CorrelationIdMiddleware
 from .pii import hash_user_id, summarize_text
 from .schemas import ChatRequest, ChatResponse
-from .tracing import tracing_enabled
+from .tracing import langfuse_context, tracing_enabled
 
 configure_logging()
 log = get_logger()
@@ -33,6 +33,11 @@ async def startup() -> None:
         env=os.getenv("APP_ENV", "dev"),
         payload={"tracing_enabled": tracing_enabled()},
     )
+
+
+@app.on_event("shutdown")
+async def shutdown() -> None:
+    langfuse_context.flush()
 
 
 @app.get("/health")
@@ -66,6 +71,8 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
             feature=body.feature,
             session_id=body.session_id,
             message=body.message,
+            correlation_id=request.state.correlation_id,
+            env=os.getenv("APP_ENV", "dev"),
         )
         log.info(
             "response_sent",
